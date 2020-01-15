@@ -16,6 +16,22 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* minireaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* minireaderTests.m */; };
+		F7D56BBB2A5645F2915D89F2 /* Cocogoose Pro Italic-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F89238BADCD141F89AB69C76 /* Cocogoose Pro Italic-trial.ttf */; };
+		5AA7E2BDE2634A5B86E7FDA1 /* Cocogoose Pro Light Italic-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184E7F6BD20D49819D36DC94 /* Cocogoose Pro Light Italic-trial.ttf */; };
+		D472FACFA5E244388EAA7B57 /* Cocogoose Pro Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7254655F18640CDB286A9B4 /* Cocogoose Pro Light-trial.ttf */; };
+		6E11D34F7B9A42F1BEB6DC5E /* Cocogoose Pro Semilight Italic-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8194C12ABE2468DA07DEB8A /* Cocogoose Pro Semilight Italic-trial.ttf */; };
+		EF9D04ECA69E4CD28FE9DA5B /* Cocogoose Pro Semilight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2BF58F3BF24727A8BABB2B /* Cocogoose Pro Semilight-trial.ttf */; };
+		1B2E4DB053244FACB510F7C2 /* Cocogoose Pro Thin Italic-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A19933AE4AA54C29BBD6D26A /* Cocogoose Pro Thin Italic-trial.ttf */; };
+		11FAD1E3CE974D32A215F13F /* Cocogoose Pro Thin-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC10563E1C9C425DB6A78B05 /* Cocogoose Pro Thin-trial.ttf */; };
+		B8E9893DBE4B440EB576CF16 /* Cocogoose Pro UltraLight Italic-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F6FD6BBC614D0E86E690B0 /* Cocogoose Pro UltraLight Italic-trial.ttf */; };
+		638C24FF55C84102A1D13F7D /* Cocogoose Pro Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB92D3A719944AB0BF950C7D /* Cocogoose Pro Ultralight-trial.ttf */; };
+		ACA89BD0F832469C84D52E8B /* Cocogoose Pro-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE9BDCA1579E428F83E77558 /* Cocogoose Pro-trial.ttf */; };
+		ABE734E987C640D68AFEBC11 /* Hero-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F33955C0B1FC466985D73E2E /* Hero-Bold.otf */; };
+		0CF5F45170584629A2385313 /* Hero-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C04127B5664242A2BF3CBD88 /* Hero-Bold.ttf */; };
+		BEFE9B996B084B07AFC5EA43 /* Hero-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 59E56BC5A1784382836B1ED6 /* Hero-Light.otf */; };
+		A8ED86D4B6324C0482915222 /* Hero-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F707BE3174B62903BD992 /* Hero-Light.ttf */; };
+		C18A8F460C684EEAB8AA354E /* Hero-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D36FBC73DAD1408B9BD11327 /* Hero-Regular.otf */; };
+		AF39C754BE03470CA4CFA434 /* Hero-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F8F87CA611435A93A92BF6 /* Hero-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +67,22 @@
 		2D02E4901E0B4A5D006451C7 /* minireader-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "minireader-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F89238BADCD141F89AB69C76 /* Cocogoose Pro Italic-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Italic-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Italic-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		184E7F6BD20D49819D36DC94 /* Cocogoose Pro Light Italic-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Light Italic-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Light Italic-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7254655F18640CDB286A9B4 /* Cocogoose Pro Light-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Light-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Light-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8194C12ABE2468DA07DEB8A /* Cocogoose Pro Semilight Italic-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Semilight Italic-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Semilight Italic-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EA2BF58F3BF24727A8BABB2B /* Cocogoose Pro Semilight-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Semilight-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Semilight-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A19933AE4AA54C29BBD6D26A /* Cocogoose Pro Thin Italic-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Thin Italic-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Thin Italic-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BC10563E1C9C425DB6A78B05 /* Cocogoose Pro Thin-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Thin-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Thin-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C5F6FD6BBC614D0E86E690B0 /* Cocogoose Pro UltraLight Italic-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro UltraLight Italic-trial.ttf"; path = "../assets/fonts/Cocogoose Pro UltraLight Italic-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CB92D3A719944AB0BF950C7D /* Cocogoose Pro Ultralight-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro Ultralight-trial.ttf"; path = "../assets/fonts/Cocogoose Pro Ultralight-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE9BDCA1579E428F83E77558 /* Cocogoose Pro-trial.ttf */ = {isa = PBXFileReference; name = "Cocogoose Pro-trial.ttf"; path = "../assets/fonts/Cocogoose Pro-trial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F33955C0B1FC466985D73E2E /* Hero-Bold.otf */ = {isa = PBXFileReference; name = "Hero-Bold.otf"; path = "../assets/fonts/Hero-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C04127B5664242A2BF3CBD88 /* Hero-Bold.ttf */ = {isa = PBXFileReference; name = "Hero-Bold.ttf"; path = "../assets/fonts/Hero-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59E56BC5A1784382836B1ED6 /* Hero-Light.otf */ = {isa = PBXFileReference; name = "Hero-Light.otf"; path = "../assets/fonts/Hero-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C2F707BE3174B62903BD992 /* Hero-Light.ttf */ = {isa = PBXFileReference; name = "Hero-Light.ttf"; path = "../assets/fonts/Hero-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D36FBC73DAD1408B9BD11327 /* Hero-Regular.otf */ = {isa = PBXFileReference; name = "Hero-Regular.otf"; path = "../assets/fonts/Hero-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		54F8F87CA611435A93A92BF6 /* Hero-Regular.ttf */ = {isa = PBXFileReference; name = "Hero-Regular.ttf"; path = "../assets/fonts/Hero-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +172,7 @@
 				00E356EF1AD99517003FC87E /* minireaderTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				CB4061CDB1A94FAE896FF225 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +189,30 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		CB4061CDB1A94FAE896FF225 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				F89238BADCD141F89AB69C76 /* Cocogoose Pro Italic-trial.ttf */,
+				184E7F6BD20D49819D36DC94 /* Cocogoose Pro Light Italic-trial.ttf */,
+				D7254655F18640CDB286A9B4 /* Cocogoose Pro Light-trial.ttf */,
+				E8194C12ABE2468DA07DEB8A /* Cocogoose Pro Semilight Italic-trial.ttf */,
+				EA2BF58F3BF24727A8BABB2B /* Cocogoose Pro Semilight-trial.ttf */,
+				A19933AE4AA54C29BBD6D26A /* Cocogoose Pro Thin Italic-trial.ttf */,
+				BC10563E1C9C425DB6A78B05 /* Cocogoose Pro Thin-trial.ttf */,
+				C5F6FD6BBC614D0E86E690B0 /* Cocogoose Pro UltraLight Italic-trial.ttf */,
+				CB92D3A719944AB0BF950C7D /* Cocogoose Pro Ultralight-trial.ttf */,
+				DE9BDCA1579E428F83E77558 /* Cocogoose Pro-trial.ttf */,
+				F33955C0B1FC466985D73E2E /* Hero-Bold.otf */,
+				C04127B5664242A2BF3CBD88 /* Hero-Bold.ttf */,
+				59E56BC5A1784382836B1ED6 /* Hero-Light.otf */,
+				7C2F707BE3174B62903BD992 /* Hero-Light.ttf */,
+				D36FBC73DAD1408B9BD11327 /* Hero-Regular.otf */,
+				54F8F87CA611435A93A92BF6 /* Hero-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -240,7 +297,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -293,6 +350,22 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F7D56BBB2A5645F2915D89F2 /* Cocogoose Pro Italic-trial.ttf in Resources */,
+				5AA7E2BDE2634A5B86E7FDA1 /* Cocogoose Pro Light Italic-trial.ttf in Resources */,
+				D472FACFA5E244388EAA7B57 /* Cocogoose Pro Light-trial.ttf in Resources */,
+				6E11D34F7B9A42F1BEB6DC5E /* Cocogoose Pro Semilight Italic-trial.ttf in Resources */,
+				EF9D04ECA69E4CD28FE9DA5B /* Cocogoose Pro Semilight-trial.ttf in Resources */,
+				1B2E4DB053244FACB510F7C2 /* Cocogoose Pro Thin Italic-trial.ttf in Resources */,
+				11FAD1E3CE974D32A215F13F /* Cocogoose Pro Thin-trial.ttf in Resources */,
+				B8E9893DBE4B440EB576CF16 /* Cocogoose Pro UltraLight Italic-trial.ttf in Resources */,
+				638C24FF55C84102A1D13F7D /* Cocogoose Pro Ultralight-trial.ttf in Resources */,
+				ACA89BD0F832469C84D52E8B /* Cocogoose Pro-trial.ttf in Resources */,
+				ABE734E987C640D68AFEBC11 /* Hero-Bold.otf in Resources */,
+				0CF5F45170584629A2385313 /* Hero-Bold.ttf in Resources */,
+				BEFE9B996B084B07AFC5EA43 /* Hero-Light.otf in Resources */,
+				A8ED86D4B6324C0482915222 /* Hero-Light.ttf in Resources */,
+				C18A8F460C684EEAB8AA354E /* Hero-Regular.otf in Resources */,
+				AF39C754BE03470CA4CFA434 /* Hero-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
