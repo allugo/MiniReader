@@ -5,11 +5,13 @@ import {
   Dimensions,
   View,
   Text,
-  TouchableOpacity,
+  Image,
   AsyncStorage
 } from 'react-native';
 
 import moment from 'moment';
+
+import Char2 from './../assets/img/char2.png';
 
 export default function Finished (props) {
     const checkDate = async () => {
@@ -39,14 +41,14 @@ export default function Finished (props) {
           </Text>
           <Text style={{fontSize: 20, textAlign: 'center', fontFamily: 'Hero-Regular', color: '#929292'}}>
             Parabéns, meu caro leitor. Hoje você conseguiu dar mais um passo rumo aos seus objetivos e ao
-            conhecimento eterno!
+            conhecimento eterno!{" "}
             <Text style={{fontSize: 20, textAlign: 'center', fontFamily: 'Hero-Bold', color: '#929292'}}>
             Agora pode relaxar ;)
             </Text>
           </Text>
         </View>
         <View style={styles.imageContainer}>
-          <Text>IMAGEM</Text>
+          <Image style={styles.image} resizeMode={"stretch"} source={Char2}/>
         </View>
       </View>
     </SafeAreaView>
@@ -72,6 +74,11 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    margin: 80
+  },
+  image: {
+    width: Dimensions.get('screen').width * 0.7,
+    height: Dimensions.get('screen').height * 0.3,
   },
 });

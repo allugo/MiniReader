@@ -6,8 +6,11 @@ import {
   View,
   Text,
   TouchableOpacity,
-  AsyncStorage
+  AsyncStorage,
+  Image
 } from 'react-native';
+
+import Char2 from './../assets/img/char2.png';
 
 export default function Failed (props) {
 
@@ -39,7 +42,7 @@ export default function Failed (props) {
           </Text>
         </View>
         <View style={styles.imageContainer}>
-          <Text>IMAGEM</Text>
+          <Image style={styles.image} resizeMode={"stretch"} source={Char2}/>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={async () => await goBack()}>
@@ -70,7 +73,12 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    margin: 80
+  },
+  image: {
+    width: Dimensions.get('screen').width * 0.7,
+    height: Dimensions.get('screen').height * 0.3,
   },
   buttonContainer: {
     flex: 1,

@@ -6,8 +6,13 @@ import {
   View,
   Text,
   TouchableOpacity,
-  AsyncStorage
+  AsyncStorage,
+  Image
 } from 'react-native';
+
+import normalize from 'react-native-normalize';
+
+import Char1 from './../assets/img/char1.png';
 
 import moment from 'moment';
 
@@ -36,17 +41,17 @@ export default function Home (props) {
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.textContainer}>
-          <Text style={{fontSize: 25, textAlign: 'center', fontFamily: 'Hero-Regular', color: '#929292'}}>
+          <Text style={{fontSize: normalize(25), textAlign: 'center', fontFamily: 'Hero-Regular', color: '#929292'}}>
             Crie uma meta de leitura diária e acompanhe o seu desempenho!
             Ex.: Ler 10 minutos por dia, ler 10 páginas por dia!
           </Text>
         </View>
         <View style={styles.imageContainer}>
-          <Text>IMAGEM</Text>
+          <Image style={styles.image} resizeMode={"stretch"} source={Char1}/>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('CreateMilestone')}>
-            <Text style={{fontSize: 24, color: '#F5FCF7', fontFamily: 'Hero-Bold'}}>Criar meta de leitura diaria</Text>
+            <Text style={{fontSize: normalize(24), color: '#F5FCF7', fontFamily: 'Hero-Bold'}}>Criar meta de leitura diaria</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -62,22 +67,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: Dimensions.get('screen').height,
-    padding: 20
+    padding: normalize(20)
   },
   textContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    padding: 10
+    padding: normalize(10)
   },
   imageContainer: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    margin: normalize(20)
+  },
+  image: {
+    width: normalize(Dimensions.get('screen').width * 0.9),
+    height: normalize(Dimensions.get('screen').width * 0.6),
   },
   buttonContainer: {
     flex: 1,
-    elevation: 10,
   },
   button: {
     backgroundColor: '#EC6960',
@@ -85,6 +94,7 @@ const styles = StyleSheet.create({
     height: '30%',
     borderRadius: 10,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    elevation: 3,
   }
 });

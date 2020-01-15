@@ -6,8 +6,13 @@ import {
   View,
   Text,
   TouchableOpacity,
-  AsyncStorage
+  AsyncStorage,
+  ScrollView
 } from 'react-native';
+
+import AwesomeAlert from 'react-native-awesome-alerts';
+
+import {Icon} from 'native-base';
 
 import moment from 'moment';
 
@@ -15,6 +20,7 @@ export default function Milestone (props) {
     const [number, setNumber] = useState(0);
     const [type, setType] = useState(0);
     const [date, setDate] = useState(new Date());
+    const [alert, setAlert] = useState(false);
 
     const getData = async () => {
         const nb = await AsyncStorage.getItem('number');
@@ -25,13 +31,17 @@ export default function Milestone (props) {
         await setDate(new Date(dt));
     }
 
-    const reset = async () => {
-        await AsyncStorage.setItem('number', '');
-        await AsyncStorage.setItem('type', '');
-        await AsyncStorage.setItem('finished', '');
-        await AsyncStorage.setItem('date', '');
-
+    const goBack = async () => {
         props.navigation.navigate('CreateMilestone');
+    }
+
+    const reset = async () => {
+      await AsyncStorage.setItem('number', '');
+      await AsyncStorage.setItem('type', '');
+      await AsyncStorage.setItem('finished', '');
+      await AsyncStorage.setItem('date', '');
+
+      props.navigation.navigate('Home');
     }
 
     const setWin = async () => {
@@ -41,7 +51,7 @@ export default function Milestone (props) {
 
     useEffect(() => {
         getData();
-    }, [])
+    }, [props.navigation.getParam('number')])
 
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -56,9 +66,18 @@ export default function Milestone (props) {
                 {moment(date).format("DD/MM/YYYY")}
             </Text>
         </View>
+        <View style={{flex: 0.1, display: 'flex', flexDirection: 'row'}}>
+          <View style={{flex: 1.5}}></View>
+          <TouchableOpacity 
+          style={{flex: 0.5, justifyContent: 'center', alignItems: 'center'}}
+          onPress={() => setAlert(true)}
+          >
+            <Icon type="Feather" style={{fontSize: 50, color: '#EC6960'}} name="trash-2"/>
+          </TouchableOpacity>
+        </View>
         <View style={styles.milestoneContainer}>
             <Text style={{fontFamily: 'Hero-Bold', fontSize: 180, color: '#EC6960'}}>
-                {number}
+                {number || '0'}
             </Text>
             <Text style={{fontFamily: 'Hero-Bold', fontSize: 50, color: '#6C6C6C'}}>
                 {type === 1 ? "Páginas" : 'Minutos'}
@@ -77,7 +96,7 @@ export default function Milestone (props) {
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonCancel}
-            onPress={() => reset()}
+            onPress={() => goBack()}
             >
                 <Text
                 style={{
@@ -91,6 +110,29 @@ export default function Milestone (props) {
             </TouchableOpacity>
         </View>
       </View>
+      <AwesomeAlert 
+        show={alert}
+        title="Epa, peraí."
+        message="Você esqueceu de preencher alguma coisa. Confere aí."
+        closeOnTouchOutside={true}
+        closeOnHardwareBackPress={false}
+        showConfirmButton
+        showCancelButton
+        cancelText="Cancelar"
+        confirmText="Certo"
+        confirmButtonColor="green"
+        cancelButtonColor="red"
+        titleStyle={{fontSize: 20, fontFamily: 'Hero-Bold'}}
+        messageStyle={{fontSize: 18}}
+        cancelButtonStyle={{height: 40, width: 100, justifyContent: 'center', alignItems: 'center'}}
+        confirmButtonStyle={{height: 40, width: 100, justifyContent: 'center', alignItems: 'center'}}
+        confirmButtonTextStyle={{fontFamily: 'Hero-Bold', fontSize: 18}}
+        cancelButtonTextStyle={{fontFamily: 'Hero-Bold', fontSize: 18}}
+        onCancelPressed={() => {
+          setAlert(false);
+        }}
+        onConfirmPressed={() => reset()}
+      />
     </SafeAreaView>
   );
 };

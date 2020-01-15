@@ -32,7 +32,7 @@ export default function CreateMilestone(props) {
             await AsyncStorage.setItem('finished', String(false));
             await AsyncStorage.setItem('date', String(new Date()));
 
-            props.navigation.navigate('Milestone');
+            props.navigation.navigate('Milestone', {number: number});
         }
     }
 
@@ -95,7 +95,15 @@ export default function CreateMilestone(props) {
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonCancel}
-            onPress={() => props.navigation.navigate('Home')}
+            onPress={async () => {
+              const number = await AsyncStorage.getItem('number');
+              
+              if (number) {
+                props.navigation.navigate('Milestone');
+              } else {
+                props.navigation.navigate('Home');
+              }
+            }}
             >
                 <Text
                 style={{
