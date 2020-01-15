@@ -9,44 +9,41 @@ import {
   AsyncStorage
 } from 'react-native';
 
-import moment from 'moment';
+export default function Failed (props) {
 
-export default function Home (props) {
+    const goBack = async () => {
+        console.warn('going');
 
-  const checkMilestone = async () => {
-    const date = await AsyncStorage.getItem('date');
-    const finished = await AsyncStorage.getItem('finished');
+        await AsyncStorage.setItem('number', '');
+        await AsyncStorage.setItem('type', '');
+        await AsyncStorage.setItem('finished', '');
+        await AsyncStorage.setItem('date', '');
 
-    if (!moment(new Date(date)).isSame(moment(), 'day') && !Boolean(finished)) {
-      props.navigation.navigate('Failed');
-      return;
-    } 
+        console.warn('home');
 
-    const number = await AsyncStorage.getItem('number');
-    if (number) {
-      props.navigation.navigate('Milestone');
+        props.navigation.navigate('Home');
     }
-  }
-
-  useEffect(() => {
-    checkMilestone();
-  }, [])
 
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.textContainer}>
-          <Text style={{fontSize: 25, textAlign: 'center', fontFamily: 'Hero-Regular', color: '#929292'}}>
-            Crie uma meta de leitura diária e acompanhe o seu desempenho!
-            Ex.: Ler 10 minutos por dia, ler 10 páginas por dia!
+          <Text style={{fontSize: 28, textAlign: 'center', fontFamily: 'Cocogoose Pro-trial', color: 'red'}}>
+              Poxa vida, oh dear!
+          </Text>
+          <Text style={{fontSize: 20, textAlign: 'center', fontFamily: 'Hero-Regular', color: '#929292'}}>
+            Meu caro leitor, infelizmente você não atingiu sua meta de ontem... Sei que você se esforçou, {""}
+            <Text style={{fontSize: 20, textAlign: 'center', fontFamily: 'Hero-Bold', color: 'red'}}>
+            então tente novamente! ;(
+            </Text>
           </Text>
         </View>
         <View style={styles.imageContainer}>
           <Text>IMAGEM</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('CreateMilestone')}>
-            <Text style={{fontSize: 24, color: '#F5FCF7', fontFamily: 'Hero-Bold'}}>Criar meta de leitura diaria</Text>
+          <TouchableOpacity style={styles.button} onPress={async () => await goBack()}>
+            <Text style={{fontSize: 24, color: '#F5FCF7', fontFamily: 'Hero-Bold'}}>Tudo bem...</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -68,7 +65,7 @@ const styles = StyleSheet.create({
     flex: 1,
     display: 'flex',
     justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     padding: 10
   },
   imageContainer: {

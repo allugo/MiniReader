@@ -25,6 +25,20 @@ export default function Milestone (props) {
         await setDate(new Date(dt));
     }
 
+    const reset = async () => {
+        await AsyncStorage.setItem('number', '');
+        await AsyncStorage.setItem('type', '');
+        await AsyncStorage.setItem('finished', '');
+        await AsyncStorage.setItem('date', '');
+
+        props.navigation.navigate('CreateMilestone');
+    }
+
+    const setWin = async () => {
+        await AsyncStorage.setItem('finished', String(true));
+        props.navigation.navigate('Finished');
+    }
+
     useEffect(() => {
         getData();
     }, [])
@@ -51,7 +65,7 @@ export default function Milestone (props) {
             </Text>
         </View>
         <View style={styles.buttonContainer}>
-            <TouchableOpacity onPress={() => create()} style={styles.button}>
+            <TouchableOpacity onPress={() => setWin()} style={styles.button}>
                 <Text
                 style={{
                     fontSize: 24,
@@ -63,7 +77,7 @@ export default function Milestone (props) {
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonCancel}
-            onPress={() => props.navigation.navigate('Home')}
+            onPress={() => reset()}
             >
                 <Text
                 style={{
