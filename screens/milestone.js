@@ -23,6 +23,7 @@ export default function Milestone (props) {
     const [type, setType] = useState(0);
     const [date, setDate] = useState(new Date());
     const [alert, setAlert] = useState(false);
+    const [finishAlert, setFinishAlert] = useState(false);
 
     const getData = async () => {
         const nb = await AsyncStorage.getItem('number');
@@ -88,7 +89,7 @@ export default function Milestone (props) {
             </Text>
         </View>
         <View style={styles.buttonContainer}>
-            <TouchableOpacity onPress={() => setWin()} style={styles.button}>
+            <TouchableOpacity onPress={() => setFinishAlert(true)} style={styles.button}>
                 <Text
                 style={{
                     fontSize: normalize(24),
@@ -114,6 +115,29 @@ export default function Milestone (props) {
             </TouchableOpacity>
         </View>
       </View>
+      <AwesomeAlert 
+        show={finishAlert}
+        title="Quase lá!"
+        message="Só confirmando, você concluiu sua meta mesmo?"
+        closeOnTouchOutside={false}
+        closeOnHardwareBackPress={false}
+        showConfirmButton
+        showCancelButton
+        cancelText="Não"
+        confirmText="Sim"
+        confirmButtonColor="green"
+        cancelButtonColor="red"
+        titleStyle={{fontSize: 20, fontFamily: 'Hero-Bold'}}
+        messageStyle={{fontSize: 18}}
+        cancelButtonStyle={{height: 40, width: 100, justifyContent: 'center', alignItems: 'center'}}
+        confirmButtonStyle={{height: 40, width: 100, justifyContent: 'center', alignItems: 'center'}}
+        confirmButtonTextStyle={{fontFamily: 'Hero-Bold', fontSize: 18}}
+        cancelButtonTextStyle={{fontFamily: 'Hero-Bold', fontSize: 18}}
+        onCancelPressed={() => {
+          setFinishAlert(false);
+        }}
+        onConfirmPressed={() => setWin()}
+      />
       <AwesomeAlert 
         show={alert}
         title="Epa, peraí."
