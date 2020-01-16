@@ -14,6 +14,8 @@ import {
 import RNPickerSelect from 'react-native-picker-select';
 import AwesomeAlert from 'react-native-awesome-alerts';
 
+import normalize from 'react-native-normalize';
+
 export default function CreateMilestone(props) {
     const [pressed, setPressed] = useState(styles.textInput);
     const [number, setNumber] = useState(0);
@@ -42,7 +44,7 @@ export default function CreateMilestone(props) {
             <View style={styles.inputContainer}>
             <Text
                 style={{
-                fontSize: 25,
+                fontSize: normalize(25),
                 textAlign: "center",
                 fontFamily: "Hero-Regular",
                 color: "#929292"
@@ -61,7 +63,7 @@ export default function CreateMilestone(props) {
             <View style={styles.imageContainer}>
             <Text
                 style={{
-                fontSize: 25,
+                fontSize: normalize(25),
                 textAlign: "center",
                 fontFamily: "Hero-Regular",
                 color: "#929292"
@@ -86,7 +88,7 @@ export default function CreateMilestone(props) {
             <TouchableOpacity onPress={() => create()} style={styles.button}>
                 <Text
                 style={{
-                    fontSize: 24,
+                    fontSize: normalize(24),
                     color: "#F5FCF7",
                     fontFamily: "Hero-Bold"
                 }}
@@ -97,7 +99,7 @@ export default function CreateMilestone(props) {
             <TouchableOpacity style={styles.buttonCancel}
             onPress={async () => {
               const number = await AsyncStorage.getItem('number');
-              
+
               if (number) {
                 props.navigation.navigate('Milestone');
               } else {
@@ -107,7 +109,7 @@ export default function CreateMilestone(props) {
             >
                 <Text
                 style={{
-                    fontSize: 24,
+                    fontSize: normalize(24),
                     color: "black",
                     fontFamily: "Hero-Bold"
                 }}
@@ -166,24 +168,24 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#EC6960",
-    width: Dimensions.get("screen").width * 0.8,
-    height: "25%",
+    width: normalize(300),
+    height: normalize(60),
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center"
   },
   buttonCancel: {
-    width: Dimensions.get("screen").width * 0.8,
-    height: "25%",
+    width: normalize(300),
+    height: normalize(60),
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 2,
-    marginTop: 20
+    marginTop: normalize(20)
   },
   textInput: {
-    width: Dimensions.get("screen").width * 0.8,
-    height: "40%",
+    width: normalize(Dimensions.get("screen").width * 0.8),
+    height: normalize(80),
     justifyContent: "center",
     alignItems: "center",
     fontSize: 50,
@@ -194,8 +196,8 @@ const styles = StyleSheet.create({
     color: '#EB6D5E'
   },
   textInputFocus: {
-    width: Dimensions.get("screen").width * 0.8,
-    height: "40%",
+    width: normalize(Dimensions.get("screen").width * 0.8),
+    height: normalize(80),
     justifyContent: "center",
     alignItems: "center",
     fontSize: 50,

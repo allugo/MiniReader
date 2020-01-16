@@ -11,8 +11,8 @@ const MainNavigator = createAppContainer(createStackNavigator({
   Home: {screen: Home, navigationOptions: {headerShown: false}},
   CreateMilestone: {screen: CreateMilestone, navigationOptions: {headerShown: false}},
   Milestone: {screen: Milestone, navigationOptions: {headerShown: false}},
-  Failed: {screen: Failed, navigationOptions: {headerShown: false}},
   Finished: {screen: Finished, navigationOptions: {headerShown: false}},
+  Failed: {screen: Failed, navigationOptions: {headerShown: false}},
 }));
 
 export default MainNavigator;

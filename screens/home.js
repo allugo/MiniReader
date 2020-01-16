@@ -12,7 +12,7 @@ import {
 
 import normalize from 'react-native-normalize';
 
-import Char1 from './../assets/img/char1.png';
+import Char1 from './../assets/img/lendo.png';
 
 import moment from 'moment';
 
@@ -22,13 +22,16 @@ export default function Home (props) {
     const date = await AsyncStorage.getItem('date');
     const finished = await AsyncStorage.getItem('finished');
 
-    if (!moment(new Date(date)).isSame(moment(), 'day') && !Boolean(finished)) {
-      props.navigation.navigate('Failed');
-      return;
-    } 
+    if ((date !== '' && date !== null) && (finished !== '' && finished !== null)) {
+      if (!moment(new Date(date)).isSame(moment(), 'day') && Boolean(finished) === false) {
+        props.navigation.navigate('Failed');
+        return;
+      } 
+    }
 
     const number = await AsyncStorage.getItem('number');
-    if (number) {
+    if (number !== '' && number !== null) 
+    {
       props.navigation.navigate('Milestone');
     }
   }

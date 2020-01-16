@@ -12,6 +12,8 @@ import {
 
 import AwesomeAlert from 'react-native-awesome-alerts';
 
+import normalize from 'react-native-normalize';
+
 import {Icon} from 'native-base';
 
 import moment from 'moment';
@@ -58,11 +60,11 @@ export default function Milestone (props) {
       <View style={styles.container}>
         <View style={styles.header}>
             <Text 
-            style={{flex: 1, fontFamily: 'Cocogoose Pro-trial', fontSize: 20, color: '#091244'}}>
+            style={{flex: 1, fontFamily: 'Cocogoose Pro-trial', fontSize: normalize(20), color: '#091244'}}>
                 Meta de Hoje
             </Text>
             <Text 
-            style={{flex: 1, textAlign: 'right', fontFamily: 'Hero-Regular', fontSize: 25, color: '#091244'}}>
+            style={{flex: 1, textAlign: 'right', fontFamily: 'Hero-Regular', fontSize: normalize(25), color: '#091244'}}>
                 {moment(date).format("DD/MM/YYYY")}
             </Text>
         </View>
@@ -72,14 +74,14 @@ export default function Milestone (props) {
           style={{flex: 0.5, justifyContent: 'center', alignItems: 'center'}}
           onPress={() => setAlert(true)}
           >
-            <Icon type="Feather" style={{fontSize: 50, color: '#EC6960'}} name="trash-2"/>
+            <Icon type="Feather" style={{fontSize: normalize(35), color: '#EC6960'}} name="trash-2"/>
           </TouchableOpacity>
         </View>
         <View style={styles.milestoneContainer}>
-            <Text style={{fontFamily: 'Hero-Bold', fontSize: 180, color: '#EC6960'}}>
+            <Text style={{fontFamily: 'Hero-Bold', fontSize: normalize(180), color: '#EC6960'}}>
                 {number || '0'}
             </Text>
-            <Text style={{fontFamily: 'Hero-Bold', fontSize: 50, color: '#6C6C6C'}}>
+            <Text style={{fontFamily: 'Hero-Bold', fontSize: normalize(50), color: '#6C6C6C'}}>
                 {type === 1 ? "Páginas" : 'Minutos'}
             </Text>
         </View>
@@ -87,7 +89,7 @@ export default function Milestone (props) {
             <TouchableOpacity onPress={() => setWin()} style={styles.button}>
                 <Text
                 style={{
-                    fontSize: 24,
+                    fontSize: normalize(24),
                     color: "#F5FCF7",
                     fontFamily: "Hero-Bold"
                 }}
@@ -100,7 +102,7 @@ export default function Milestone (props) {
             >
                 <Text
                 style={{
-                    fontSize: 24,
+                    fontSize: normalize(24),
                     color: "black",
                     fontFamily: "Hero-Bold"
                 }}
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#EC6960',
-    width: Dimensions.get('screen').width * 0.8,
+    width: normalize(Dimensions.get('screen').width * 0.8),
     height: '30%',
     borderRadius: 10,
     justifyContent: 'center',
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
   },
   buttonCancel: {
     backgroundColor: 'transparent',
-    width: Dimensions.get("screen").width * 0.8,
+    width: normalize(Dimensions.get("screen").width * 0.8),
     height: "25%",
     borderRadius: 10,
     justifyContent: "center",
