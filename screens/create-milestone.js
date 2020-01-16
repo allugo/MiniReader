@@ -31,6 +31,7 @@ export default function CreateMilestone(props) {
         {
             await AsyncStorage.setItem('number', String(number));
             await AsyncStorage.setItem('type', String(type));
+            console.warn(String(false));
             await AsyncStorage.setItem('finished', String(false));
             await AsyncStorage.setItem('date', String(new Date()));
 

@@ -22,11 +22,17 @@ export default function Home (props) {
     const date = await AsyncStorage.getItem('date');
     const finished = await AsyncStorage.getItem('finished');
 
-    if ((date !== '' && date !== null) && (finished !== '' && finished !== null)) {
-      if (!moment(new Date(date)).isSame(moment(), 'day') && Boolean(finished) === false) {
+    if ((date !== '' && date !== null) && (finished !== '' && finished !== null)) 
+    {
+      if ((moment(new Date(date)).isSame(moment(), 'day') === false) && (finished === 'false')) {
+        console.warn('entrou aqui dnv');
         props.navigation.replace('Failed');
         return;
       } 
+      else if ((moment(new Date()).isSame(moment(), 'day')) && Boolean(finished) === true){
+        props.navigation.replace('Finished');
+        return;
+      }
     }
 
     const number = await AsyncStorage.getItem('number');

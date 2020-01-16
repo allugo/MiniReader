@@ -56,7 +56,7 @@ export default function Milestone (props) {
 
     useEffect(() => {
         getData();
-    }, [props.navigation.getParam('number')])
+    }, [props.navigation.getParam('number'), props.navigation.getParam('date')])
 
   return (
     <SafeAreaView style={{flex: 1}}>

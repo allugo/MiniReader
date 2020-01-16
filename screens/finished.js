@@ -20,13 +20,11 @@ export default function Finished (props) {
         const date = await AsyncStorage.getItem('date');
         
         // Checking if it is another day.
-        if (!moment(new Date(date)).isSame(moment(), 'day')) {
-            await AsyncStorage.setItem('number', '');
-            await AsyncStorage.setItem('type', '');
-            await AsyncStorage.setItem('finished', '');
-            await AsyncStorage.setItem('date', '');
+        if (moment(new Date(date)).isSame(moment(), 'day') === false) {
+            await AsyncStorage.setItem('finished', 'false');
+            await AsyncStorage.setItem('date', String(new Date()));
 
-            props.navigation.navigate('Home');
+            props.navigation.navigate('Milestone', {date: String(new Date())});
         }
     }
 
