@@ -24,7 +24,7 @@ export default function Home (props) {
 
     if ((date !== '' && date !== null) && (finished !== '' && finished !== null)) {
       if (!moment(new Date(date)).isSame(moment(), 'day') && Boolean(finished) === false) {
-        props.navigation.navigate('Failed');
+        props.navigation.replace('Failed');
         return;
       } 
     }
@@ -32,7 +32,7 @@ export default function Home (props) {
     const number = await AsyncStorage.getItem('number');
     if (number !== '' && number !== null) 
     {
-      props.navigation.navigate('Milestone');
+      props.navigation.replace('Milestone');
     }
   }
 
