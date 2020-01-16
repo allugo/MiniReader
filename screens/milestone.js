@@ -38,6 +38,8 @@ export default function Milestone (props) {
     }
 
     const reset = async () => {
+      await setAlert(false);
+
       await AsyncStorage.setItem('number', '');
       await AsyncStorage.setItem('type', '');
       await AsyncStorage.setItem('finished', '');
@@ -115,13 +117,13 @@ export default function Milestone (props) {
       <AwesomeAlert 
         show={alert}
         title="Epa, peraí."
-        message="Você esqueceu de preencher alguma coisa. Confere aí."
-        closeOnTouchOutside={true}
+        message="Tem certeza que quer excluir sua meta?"
+        closeOnTouchOutside={false}
         closeOnHardwareBackPress={false}
         showConfirmButton
         showCancelButton
-        cancelText="Cancelar"
-        confirmText="Certo"
+        cancelText="Não"
+        confirmText="Sim"
         confirmButtonColor="green"
         cancelButtonColor="red"
         titleStyle={{fontSize: 20, fontFamily: 'Hero-Bold'}}
